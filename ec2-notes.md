@@ -23,4 +23,22 @@ group, choose an instance type that supports enhanced networking.
 We recommend that you launch the number of instances that you need in the placement group in a single
 launch request and that you use the same instance type for all instances in the placement group.
 
+If the root device for your instance is an Amazon EBS volume, you can easily resize your instance by
+changing its instance type.
+• If the root device for your instance is an instance store volume, you must migrate to a new instance.
+
+Spot Instances
+If you have flexibility on when your application will run, you can bid on unused Amazon EC2 compute
+capacity, called Spot Instances, and lower your costs significantly. Set by Amazon EC2 based on the last
+fulfilled bid price, the Spot Price for these instances fluctuates periodically depending on the supply of
+and demand for Spot Instance capacity.
+To use Spot Instances, you place a Spot Instance request (your bid) specifying the maximum price you
+are willing to pay per hour per instance. If the maximum price of your bid is greater than the current Spot
+Price, your request is fulfilled and your instances run until you terminate them or the Spot Price increases
+above your maximum price.Your instance can also be terminated when your bid price equals the market
+price, even when there is no increase in the market price. This can happen when demand for capacity
+rises, or when supply fluctuates.
+
+auto scalling group with spot instance
+
 
